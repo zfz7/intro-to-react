@@ -9,8 +9,8 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Counter startingCount={0} />}/>
-                <Route path="/ten" element={<Counter startingCount={10} />}/>
                 <Route path="/five" element={<Counter startingCount={5} />}/>
+                <Route path="/ten" element={<Counter startingCount={10} />}/>
                 <Route path="/time" element={<Time />}/>
             </Routes>
         </BrowserRouter>
