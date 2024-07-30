@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
 import Counter from "./comp/Counter";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Time from "./comp/Time";
 
 function App() {
     return (
-        <>
-            <h1>Hello World, my name is daniel</h1>
-            <Counter startingCount={10}/>
-            <Counter startingCount={15}/>
-            <Counter startingCount={-70}/>
-            <a href="./time.html">What time is it?</a>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Counter startingCount={0} />}/>
+                <Route path="/ten" element={<Counter startingCount={10} />}/>
+                <Route path="/five" element={<Counter startingCount={5} />}/>
+                <Route path="/time" element={<Time />}/>
+            </Routes>
+        </BrowserRouter>
     );
 }
 
