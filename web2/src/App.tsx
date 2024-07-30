@@ -1,21 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
+import Counter from "./comp/Counter";
 
 function App() {
-    const [counter, setCounter] = useState(10);
     return (
         <>
             <h1>Hello World, my name is daniel</h1>
-            <br></br>
-            <div>Counter: {counter}</div>
-            <br></br>
-            <button onClick={() => {
-                console.log("Count before " + counter)
-                setCounter(counter + 1)
-                console.log("Count after " + counter)
-            }}>Increase count
-            </button>
-            <br></br>
+            <Counter startingCount={10}/>
+            <Counter startingCount={15}/>
+            <Counter startingCount={-70}/>
             <a href="./time.html">What time is it?</a>
         </>
     );
