@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    var counter = 10;
+    return (
+        <>
+            <h1>Hello World, my name is daniel</h1>
+            <br></br>
+            <div>Counter: {counter}</div>
+            <br></br>
+            <button onClick={() => {
+                console.log("Count before " +counter)
+                counter = counter + 1;
+                console.log("Count after " +counter)
+            }}>Increase count
+            </button>
+            <br></br>
+            <a href="./time.html">What time is it?</a>
+        </>
+    );
 }
 
 export default App;
