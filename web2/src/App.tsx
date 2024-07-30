@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-    var counter = 10;
+    const [counter, setCounter] = useState(10);
     return (
         <>
             <h1>Hello World, my name is daniel</h1>
@@ -10,9 +10,9 @@ function App() {
             <div>Counter: {counter}</div>
             <br></br>
             <button onClick={() => {
-                console.log("Count before " +counter)
-                counter = counter + 1;
-                console.log("Count after " +counter)
+                console.log("Count before " + counter)
+                setCounter(counter + 1)
+                console.log("Count after " + counter)
             }}>Increase count
             </button>
             <br></br>
